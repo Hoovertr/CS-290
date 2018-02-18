@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ajax Activity</title>
+		<script src='AjaxJs.js'></script>
+		<script src='AjaxBin.js'></script>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<legend>Weather App</legend>
+				<label for="city">City</label><br>
+				<input type="text" name="city" id="city"><br>
+				<label for="zipc">ZipCode</label><br>
+				<input type="text" name="zipcode" id="zipc">
+				<input type="submit" id="citySubmit">
+			</fieldset>
+		</form>
+		<div>
+			<h2>Weather for:<span id="weatherCity"></span></h2>
+			<p>Temperature (F): <span id="curTemp"></span> degrees</p>
+			<p>Current conditions: <span id="curCond"></span>
+			<p>Humidity: <span id="curHumid"></span> %</p>
+		</div>
+		<form action="http://httpbin.org/post" method=post>
+			<fieldset>		
+				<legend>HTTP Bin Post</legend>
+				<label for="something">Input Here</label><br>
+				<input type="text" name="something" id="something"><br>
+				<input type="submit" id="binSubmit">
+			</fieldset>
+		</form>
+		<div>
+			<h2>Data returned:</h2>
+			<p><span id="binData"></span</p>
+		</div>
+	</body>
+</html>
