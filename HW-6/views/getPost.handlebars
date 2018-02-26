@@ -1,0 +1,20 @@
+<h1> {{requestType}} Request Received </h1>
+		{{#if sentData.length}}
+			<h2> The sent data will be in "name: value" form </h2>
+		{{else}}
+			<h2> The {{requestType}} Request was empty. </h2>
+		{{/if}}
+		{{#each sentData}}
+			<ul>
+				<li>{{this.Name}}:  {{this.Value}}
+			</ul>
+		{{/each}}
+		{{#if recData.length}}
+			<h2> The received data will be in "name: value" form </h2>
+		{{/if}}
+		{{#each recData}}
+			<ul>
+				<li>{{this.Name}}:  {this.Value}}
+			<ul>
+		{{/each}}
+	
